@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>WebAR with Hiro + JSON Layout</title>
+    <title>WebAR with Hiro + JSON Layout + Box</title>
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/AR-js-org/AR.js/aframe/build/aframe-ar.min.js"></script>
     <style>
@@ -18,8 +18,11 @@
       <!-- 相機 -->
       <a-entity camera></a-entity>
 
-      <!-- Hiro marker（只作為原點用） -->
-      <a-marker preset="hiro" id="hiroMarker" emitevents="true"></a-marker>
+      <!-- Hiro marker（加入紅色方塊） -->
+      <a-marker preset="hiro" id="hiroMarker" emitevents="true">
+        <!-- 紅色方塊 -->
+        <a-box color="red" position="0 0.1 0" depth="0.1" height="0.1" width="0.1"></a-box>
+      </a-marker>
 
       <!-- 所有模型掛載到這裡 -->
       <a-entity id="modelContainer"></a-entity>
@@ -43,7 +46,7 @@
               el.setAttribute("position", obj.position.join(" "));
               el.setAttribute("rotation", obj.rotation.join(" "));
               el.setAttribute("scale", obj.scale.join(" "));
-              el.setAttribute("animation-mixer", ""); // 若模型有動畫
+              el.setAttribute("animation-mixer", "");
               container.appendChild(el);
             });
           });
