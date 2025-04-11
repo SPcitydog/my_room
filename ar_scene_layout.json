@@ -1,0 +1,18 @@
+{
+    "objects": [
+      {
+        "name": "free_axe_sylvaxe",
+        "model": "axe.glb",
+        "position": [-0.374, 0.702, -1.284],
+        "rotation": [313.99, 56.76, 0],
+        "scale": [0.4892, 0.4892, 0.4892]
+      },
+      {
+        "name": "luna_robot",
+        "model": "luna_robot.glb",
+        "position": [-0.439, 2.075, -0.009],
+        "rotation": [270, 0, 0],
+        "scale": [0.00294, 0.00294, 0.00294]
+      }
+    ]
+  }
